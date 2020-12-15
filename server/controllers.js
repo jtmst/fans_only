@@ -48,12 +48,11 @@ module.exports = {
                 // check to see if labels contain 'fan'
                 for (var i = 0; i < data.Labels.length; i++) {
                     if (data.Labels[i].Name.includes("Fan")) {
-                        console.log('success test')
+                        db.saveImage(req.body)
                         res.status(202).json("it's a fan")
                         return
                     }
                 }
-                console.log("fail test")
                 res.status(203).json("it's not a fan")
             }
         })

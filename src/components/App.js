@@ -35,7 +35,8 @@ function App(props) {
         'Accept': 'application/json'
       },
       body: JSON.stringify({
-        image: imageB64
+        image: imageB64,
+        timestamp: new Date().toUTCString(),
       }),
     })
       .then(response => response.json())
