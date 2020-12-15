@@ -13,6 +13,7 @@
     "start": "PORT=1337 nodemon ./server/index.js"
   },
   "dependencies": {
+    "autoprefixer": "^10.1.0",
     "aws-sdk": "^2.810.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -21,12 +22,13 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6",
     "path": "^0.12.7",
+    "postcss": "^8.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0",
     "stream": "0.0.2",
     "stream-http": "^3.1.1",
-    "tailwindcss": "^1.9.6",
+    "tailwindcss": "^2.0.2",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -40,6 +42,8 @@
     "style-loader": "^2.0.0",
     "@babel/preset-react": "^7.12.5",
     "webpack-dev-server": "^3.11.0",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "postcss-loader": "^4.1.0",
+    "autoprefixer": "^10.1.0"
   }
 }

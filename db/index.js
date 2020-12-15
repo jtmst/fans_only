@@ -7,6 +7,11 @@ const fanSchema = new mongoose.Schema({
     fans: {
         id: Number,
         timestamp: String,
-        likes: Number
+        likes: Number,
+        image: String
     }
 })
+
+let Fan = mongoose.model('Fan', fanSchema)
+
+// ---------------------------- Queries ---------------------------------
