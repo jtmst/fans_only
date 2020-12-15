@@ -1,4 +1,4 @@
-# only-fans
+# FansOnly
 
 Empty project.
 
