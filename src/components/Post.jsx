@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 function Post(props) {
+  const [likeClick, setLikeClink] = useState(null);
+
   return (
     <div className="individual-post">
       <img src={'data:image/jpg;base64,' + props.indPost.image}></img>

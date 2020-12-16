@@ -48,6 +48,7 @@ function App(props) {
       body: JSON.stringify({
         image: imageB64,
         timestamp: new Date().toUTCString(),
+        labels: ['Fan'],
       }),
     })
       .then((response) => response.json())
@@ -79,6 +80,12 @@ function App(props) {
       </header>
       <div className="feed-container">
         <h1 id="posts-header">Posts</h1>
+        <div id="subheader-container">
+          <h3 className="posts-subheaders">Week</h3>
+          <h3 className="posts-subheaders">Month</h3>
+          <h3 className="posts-subheaders">Year</h3>
+          <h3 className="posts-subheaders">Latest</h3>
+        </div>
         <Feed postFeed={postFeed} />
       </div>
       <div id="sidebar">

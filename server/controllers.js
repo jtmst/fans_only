@@ -32,7 +32,7 @@ module.exports = {
             } else {
                 // check to see if labels contain 'fan'
                 for (var i = 0; i < data.Labels.length; i++) {
-                    if (data.Labels[i].Name.includes("Fan")) {
+                    if (data.Labels[i].Name.includes(req.body.labels[0])) {
                         db.saveImage(req.body)
                         res.status(202).json("1")
                         return
