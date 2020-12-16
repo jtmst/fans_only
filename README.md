@@ -1,3 +1,4 @@
+
 # Image Verification API
 
 Backend API service built using express. Features dynamic image recognition and labeling using AWS Rekognize to verify and automoderate content. Stores user and imagine info, along with ratings, and tags, in a cloud hosted Mongo Database
