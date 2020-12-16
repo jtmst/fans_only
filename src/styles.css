@@ -2,7 +2,59 @@
   CSS Reset
 ==================================== */
 
-/* * {
+* {
   margin: 0;
   padding: 0;
-} */
+  background-color: aliceblue;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+.feed-container {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1150px;
+}
+
+#posts-header {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1150px;
+}
+
+/* =================================
+  Header/Nav
+==================================== */
+
+#header {
+  margin: 3rem;
+  margin-bottom: 10rem;
+}
+
+.main-logo {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 10%;
+}
+
+.submit-form {
+  float: right;
+}
+
+/* =================================
+  Feed
+==================================== */
+
+.individual-post {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 3%;
+}
+
+.individual-text {
+  background-color: white;
+}

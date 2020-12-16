@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 function Post(props) {
   return (
-    <div className="individial-post">
-      <p>{props.indPost.timestamp}</p>
+    <div className="individual-post">
+      <p className="individual-text">{props.indPost.timestamp}</p>
       <img src={'data:image/jpg;base64,' + props.indPost.image}></img>
-      <p>{props.indPost.likes}</p>
+      <p className="individual-text">{props.indPost.likes}</p>
     </div>
   );
 }

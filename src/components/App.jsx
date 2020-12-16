@@ -36,7 +36,6 @@ function App(props) {
   let imageSubmit = (e) => {
     e.preventDefault();
     let payload = { image: imageB64 };
-    // console.log(imageB64)
 
     fetch(`http://localhost:1337/img`, {
       method: 'POST',
@@ -51,7 +50,6 @@ function App(props) {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         if (data == 0) {
           alert("That isn't a fan");
         }
@@ -60,19 +58,27 @@ function App(props) {
 
   return (
     <div>
-      <header>
+      <header id="header">
         <h1 className="main-logo">FansOnly</h1>
+
+        <form
+          className="submit-form"
+          onChange={(e) => imageChange(e)}
+          onSubmit={(e) => imageSubmit(e)}
+        >
+          <input
+            type="file"
+            name="image"
+            id="file"
+            accept=".jpeg, .png, .jpg"
+          ></input>
+          <input type="submit" />
+        </form>
       </header>
-      <form onChange={(e) => imageChange(e)} onSubmit={(e) => imageSubmit(e)}>
-        <input
-          type="file"
-          name="image"
-          id="file"
-          accept=".jpeg, .png, .jpg"
-        ></input>
-        <input type="submit" />
-      </form>
-      <Feed postFeed={postFeed} />
+      <div className="feed-container">
+        <h1 id="posts-header">Posts</h1>
+        <Feed postFeed={postFeed} />
+      </div>
     </div>
   );
 }
