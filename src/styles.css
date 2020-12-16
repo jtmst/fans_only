@@ -52,7 +52,8 @@
 .individual-post {
   background-color: white;
   padding: 3rem;
-  border-radius: 3%;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.175);
 }
 
 .individual-text {
