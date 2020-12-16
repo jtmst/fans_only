@@ -16,7 +16,7 @@ let Fan = mongoose.model('Fan', FanSchema)
 // ---------------------------- Queries ---------------------------------
 
 let returnRecentPosts = (count = 5, page = 1) => {
-    return Fan.find({}.sort({}).limit(count))
+    return Fan.find({}).sort({}).limit(count)
 }
 
 let saveImage = (data) => {
@@ -25,8 +25,6 @@ let saveImage = (data) => {
         likes: 0,
         image: data.image
     })
-
-
     newFan
         .save()
         .then(() => {
