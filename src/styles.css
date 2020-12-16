@@ -1,5 +1,61 @@
-@tailwind base;
+/* =================================
+  CSS Reset
+==================================== */
 
-@tailwind components;
+* {
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
 
-@tailwind utilities;
+/* =================================
+  Base Layout Styles
+==================================== */
+
+.feed-container {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1150px;
+}
+
+#posts-header {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1150px;
+}
+
+/* =================================
+  Header/Nav
+==================================== */
+
+#header {
+  margin: 3rem;
+  margin-bottom: 10rem;
+}
+
+.main-logo {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 10%;
+}
+
+.submit-form {
+  float: right;
+}
+
+/* =================================
+  Feed
+==================================== */
+
+.individual-post {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.175);
+}
+
+.individual-text {
+  background-color: white;
+}

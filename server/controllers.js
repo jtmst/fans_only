@@ -8,28 +8,13 @@ AWS.config.update({
     region: 'us-east-1'
 })
 
-
-// var params = {
-//     Image: {
-//         S3Object: {
-//             Bucket: "fans-only-images",
-//             Name: "fan1.jpg"
-//         }
-//     },
-//     MaxLabels: 5,
-//     MinConfidence: 70
-// }
-
-// const rekognition = new AWS.Rekognition();
-// rekognition.detectLabels(params, function (err, data) {
-//     if (err) console.log(err)
-//     else console.log(data)
-// })
-
-
 module.exports = {
     getFeed: function (req, res) {
-
+        let { count, page } = req.query
+        db.returnRecentPosts(count, page)
+            .then(list => {
+                res.status(200).send(list)
+            })
     },
     addImage: function (req, res) {
 
@@ -48,13 +33,12 @@ module.exports = {
                 // check to see if labels contain 'fan'
                 for (var i = 0; i < data.Labels.length; i++) {
                     if (data.Labels[i].Name.includes("Fan")) {
-                        console.log('success test')
-                        res.status(202).json("it's a fan")
+                        db.saveImage(req.body)
+                        res.status(202).json("1")
                         return
                     }
                 }
-                console.log("fail test")
-                res.status(203).json("it's not a fan")
+                res.status(203).json("0")
             }
         })
 
