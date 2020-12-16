@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   background-color: aliceblue;
+  font-family: sans-serif;
 }
 
 /* =================================
@@ -13,17 +14,17 @@
 ==================================== */
 
 .feed-container {
-  width: 70%;
-  margin: 0 auto;
+  width: 82%;
+  float: right;
+  margin: 0;
   margin-top: 40px;
-  max-width: 1150px;
 }
 
 #posts-header {
-  width: 70%;
-  margin: 0 auto;
+  width: 82%;
+  float: right;
+  margin: 0;
   margin-top: 40px;
-  max-width: 1150px;
 }
 
 /* =================================
@@ -31,18 +32,27 @@
 ==================================== */
 
 #header {
-  margin: 3rem;
-  margin-bottom: 10rem;
+  padding: 0.5rem 3rem 1rem 3rem;
+  margin-bottom: 2rem;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.175);
 }
 
 .main-logo {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  width: 10%;
+  /* width: 10%; */
+
+  margin-left: 0rem;
+  background-color: white;
 }
 
 .submit-form {
   float: right;
+  width: 50%;
+  margin-top: -1.5rem;
+  background: white;
 }
 
 /* =================================
@@ -54,8 +64,45 @@
   padding: 3rem;
   border-radius: 5px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.175);
+  width: 35rem;
 }
 
 .individual-text {
   background-color: white;
+}
+
+/*Posts */
+
+/* =================================
+  Sidebar
+==================================== */
+#sidebar {
+  width: 10%;
+  margin: 3.25rem;
+  margin-top: 120px;
+}
+
+#nav {
+  margin-bottom: 5rem;
+}
+
+.nav-elements {
+  padding: 0.5rem 0rem;
+  border-radius: 5px;
+}
+
+#tag-header {
+  margin-bottom: 0.5rem;
+}
+.tag {
+  padding: 0.5rem 0.1rem;
+  border-radius: 5px;
+}
+
+.nav-elements:hover {
+  background-color: rgb(210, 232, 255);
+}
+
+.tag:hover {
+  background-color: rgb(210, 232, 255);
 }

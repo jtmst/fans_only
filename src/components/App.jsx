@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import 'tailwindcss/tailwind.css';
 import Feed from './Feed';
+import Button from '@material-ui/core/Button';
+import Sidebar from './Sidebar';
 
 function App(props) {
   const [imageB64, setImageB64] = useState(null);
@@ -78,6 +80,9 @@ function App(props) {
       <div className="feed-container">
         <h1 id="posts-header">Posts</h1>
         <Feed postFeed={postFeed} />
+      </div>
+      <div id="sidebar">
+        <Sidebar />
       </div>
     </div>
   );

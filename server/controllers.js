@@ -41,8 +41,5 @@ module.exports = {
                 res.status(203).json("0")
             }
         })
-
-        // console.log(req.body.image)
-        // console.log(req.body)
     },
 }
