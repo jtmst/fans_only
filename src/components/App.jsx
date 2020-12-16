@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'tailwindcss/tailwind.css';
 import Feed from './Feed';
-import Button from '@material-ui/core/Button';
 import Sidebar from './Sidebar';
 
 function App(props) {
@@ -39,6 +38,7 @@ function App(props) {
     e.preventDefault();
     let payload = { image: imageB64 };
 
+    //sends image data to AWS
     fetch(`http://localhost:1337/img`, {
       method: 'POST',
       headers: {
