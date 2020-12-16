@@ -32,7 +32,7 @@ module.exports = {
             } else {
                 // check to see if labels contain 'fan'
                 for (var i = 0; i < data.Labels.length; i++) {
-                    if (data.Labels[i].Name.includes("Fan")) {
+                    if (data.Labels[i].Name.includes(req.body.labels[0])) {
                         db.saveImage(req.body)
                         res.status(202).json("1")
                         return
@@ -41,8 +41,10 @@ module.exports = {
                 res.status(203).json("0")
             }
         })
-
-        // console.log(req.body.image)
-        // console.log(req.body)
     },
+    incrementLikes: function (req, res) {
+        let { timestamp } = req.body.timestamp
+        db.updateLikes(timestamp)
+        res.status(200).json("like recorded")
+    }
 }

@@ -1,6 +1,9 @@
-# FansOnly
 
-Empty project.
+# Image Verification API
+
+Backend API service built using express. Features dynamic image recognition and labeling using AWS Rekognize to verify and automoderate content. Stores user and imagine info, along with ratings, and tags, in a cloud hosted Mongo Database
+
+Example frontend build using React and MaterialUI
 
 ## Building and running on localhost
 
@@ -31,7 +34,3 @@ npm run build-dev
 ## Running
 
 Open the file `dist/index.html` in your browser
-
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
