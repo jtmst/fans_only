@@ -42,4 +42,9 @@ module.exports = {
             }
         })
     },
+    incrementLikes: function (req, res) {
+        let { timestamp } = req.body.timestamp
+        db.updateLikes(timestamp)
+        res.status(200).json("like recorded")
+    }
 }

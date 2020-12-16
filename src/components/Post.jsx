@@ -2,7 +2,26 @@ import React, { useState, useEffect } from 'react';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 function Post(props) {
-  const [likeClick, setLikeClink] = useState(null);
+  const [handleLikeClick, setHandleLikeClink] = useState(null);
+  const [alreadyLiked, setAlreadyLiked] = useState(false);
+
+  let handleLike = (timestamp) => {
+    if (alreadyLiked) {
+      return;
+    } else {
+      fetch(`http://localhost:1337/like`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          timestamp: timestamp,
+        }),
+      });
+      setAlreadyLiked(true);
+    }
+  };
 
   return (
     <div className="individual-post">
@@ -12,7 +31,10 @@ function Post(props) {
         {' '}
         {
           <FavoriteBorderIcon
-            style={{ backgroundColor: 'white', paddingTop: '2rem' }}
+            style={{
+              backgroundColor: 'white',
+              paddingTop: '2rem',
+            }}
           />
         }
         {props.indPost.likes} Reactions
